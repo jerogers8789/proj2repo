@@ -1,4 +1,4 @@
-const SHA256 = require("crypto-js/sha256");
+const SHA256 = require("crypto-js/SHA256");
 
 class Block {
     constructor(timestamp, data, previousHash = '') {
@@ -42,3 +42,5 @@ let exaltCoin = new Blockchain();
 exaltCoin.addBlock(new Block("20/07/2017", { amount: 4 }));
 exaltCoin.addBlock(new Block("22/07/2017", { amount: 10 }));
 console.log(JSON.stringify(exaltCoin, null, 4))
+
+module.exports = Blockchain

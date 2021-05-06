@@ -1,1 +1,1 @@
-# proj2repo
+# Project 2 - Blank-Coin
