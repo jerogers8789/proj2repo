@@ -1,3 +1,4 @@
+
 const SHA256 = require("crypto-js/sha256");
 
 class Block {
@@ -42,3 +43,13 @@ let exaltCoin = new Blockchain();
 exaltCoin.addBlock(new Block("", { amount: 4 }));
 exaltCoin.addBlock(new Block("", { amount: 10 }));
 console.log(JSON.stringify(exaltCoin, null, 4))
+=======
+class crypto = require("crypto");
+
+class Blockchain {
+    constructor() {
+        this.chain = [];
+        this.pendingTransactions = [];
+        this.newBlock();
+    }
+
