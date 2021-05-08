@@ -1,3 +1,29 @@
+
+const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const eslint = require('eslint')
+const path = require('path');
+const routes = require('./seeds');
+
+// import sequelize connection
+
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(routes);
+
+// sync sequelize models to the database, then turn on the server
+
+sequelize.sync({force: false}).then(() => {
+
+app.listen(PORT, () =>
+  console.log(`App listening on port ${PORT}!`));
+});
+=======
 const express = require('express');
 const app = express();
 const Blockchain = require("./blockchain/example"); 
@@ -61,3 +87,4 @@ console.log('Launching bitnode in port: ', myArgs);
 const server = app.listen(myArgs,function(){
 
 });
+
